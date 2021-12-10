@@ -7,6 +7,17 @@
     </jsp:include>
 </head>
 <body>
-
+<div class="d-flex flex-column">
+    <h1>You have been logged out. :)</h1>
+    <p>We hope to see you again soon!</p>
+</div>
+<div class="d-flex">
+    <div id="home">
+        <a class="btn btn-primary m-5" href="/FreshFeed">Go to The Fresh Feed</a>
+    </div>
+    <div id="login">
+        <a class="btn btn-info m-5" href="/login">Go to Login</a>
+    </div>
+</div>
 </body>
 </html>
