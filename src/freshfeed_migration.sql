@@ -2,11 +2,9 @@ CREATE DATABASE IF NOT EXISTS thefreshfeed_db;
 
 USE thefreshfeed_db;
 
-<<<<<<< HEAD
+
 CREATE TABLE IF NOT EXISTS customer (
-=======
-CREATE TABLE IF NOT EXISTS user (
->>>>>>> 99545eb90fc7085d614ea7b812b99c0552a777a9
+
     id INT UNSIGNED AUTO_INCREMENT NOT NULL,
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
@@ -20,17 +18,14 @@ CREATE TABLE IF NOT EXISTS user (
 
 CREATE TABLE IF NOT EXISTS vendor (
     id INT UNSIGNED AUTO_INCREMENT NOT NULL,
-<<<<<<< HEAD
+
     cust_id INT UNSIGNED,
+    FOREIGN KEY (cust_id) REFERENCES customer (id),
+
     vendor_name VARCHAR(50) NOT NULL UNIQUE,
     PRIMARY KEY (id),
-    FOREIGN KEY (cust_id) REFERENCES customer (id)
-=======
-    user_id INT UNSIGNED,
-    vendor_name VARCHAR(50) NOT NULL UNIQUE,
-    PRIMARY KEY (id),
-    FOREIGN KEY (user_id) REFERENCES user (id)
->>>>>>> 99545eb90fc7085d614ea7b812b99c0552a777a9
+
+
 );
 
 CREATE TABLE IF NOT EXISTS category (
@@ -67,10 +62,9 @@ CREATE TABLE IF NOT EXISTS ad (
 CREATE TABLE IF NOT EXISTS favorite (
     cust_id INT UNSIGNED,
     ad_id INT UNSIGNED,
-<<<<<<< HEAD
+
     FOREIGN KEY (cust_id) REFERENCES customer (id),
-=======
-    FOREIGN KEY (user_id) REFERENCES user (id),
->>>>>>> 99545eb90fc7085d614ea7b812b99c0552a777a9
+
+
     FOREIGN KEY (ad_id) REFERENCES ad (id)
 );

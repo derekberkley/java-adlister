@@ -32,13 +32,13 @@ public class MySQLAdsDao implements Ads {
     public List<Ad> all() {
         PreparedStatement stmt = null;
         try {
-<<<<<<< HEAD
-            stmt = connection.prepareStatement("SELECT * FROM ads");
+
+            stmt = connection.prepareStatement("SELECT * FROM ad");
             ResultSet rs = stmt.executeQuery();
-=======
-            stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM ad");
->>>>>>> 99545eb90fc7085d614ea7b812b99c0552a777a9
+
+            stmt = connection.prepareStatement("SELECT * FROM ad");
+            ResultSet resultSet = stmt.executeQuery();
+
             return createAdsFromResults(rs);
         } catch (SQLException e) {
             throw new RuntimeException("Error retrieving all ads.", e);
