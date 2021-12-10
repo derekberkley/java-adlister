@@ -13,5 +13,5 @@ INSERT INTO vendor (user_id, vendor_name) VALUES
     ((SELECT user.id FROM user WHERE user.first_name = 'Joanna'), 'Foss\'s Florals');
 
 INSERT INTO ad (title, description) VALUES ('10 Bundles of Celery', '10 Bundle of Celery, Non-GMO, Freshly Sourced, Plentiful crops');
-INSERT INTO ad(title, description, price) VALUES ('50 ears of Corn', 'Beautiful, yellow Corn, freshly pulled from stalks', '100')
 ALTER table ad ADD price int unsigned not null;
+INSERT INTO ad (title, description, price) VALUES ('50 ears of Corn', 'Beautiful, yellow Corn, freshly pulled from stalks', '100')

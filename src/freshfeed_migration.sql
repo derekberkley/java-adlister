@@ -17,9 +17,9 @@ CREATE TABLE IF NOT EXISTS user (
 CREATE TABLE IF NOT EXISTS vendor (
     id INT UNSIGNED AUTO_INCREMENT NOT NULL,
     user_id INT UNSIGNED,
-    FOREIGN KEY (user_id) REFERENCES user (id),
     vendor_name VARCHAR(50) NOT NULL UNIQUE,
     PRIMARY KEY (id),
+    FOREIGN KEY (user_id) REFERENCES user (id)
 );
 
 CREATE TABLE IF NOT EXISTS category (
