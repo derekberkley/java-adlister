@@ -19,5 +19,6 @@
         <a class="btn btn-info m-5" href="/login">Go to Login</a>
     </div>
 </div>
+<jsp:include page="/WEB-INF/partials/footer.jsp" />
 </body>
 </html>

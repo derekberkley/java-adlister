@@ -14,6 +14,6 @@
     <h1>${ad.title}</h1>
     <p>${ad.description}</p>
     <p>$${ad.price}</p>
-
+<jsp:include page="/WEB-INF/partials/footer.jsp" />
 </body>
 </html>
