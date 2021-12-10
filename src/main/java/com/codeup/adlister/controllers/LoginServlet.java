@@ -31,13 +31,13 @@ public class LoginServlet extends HttpServlet {
             return;
         }
 
-        boolean validAttempt = Password.check(password, user.getPassword());
+        boolean validAttempt = Password.check(password, Password.hash(user.getPassword()));
 
         if (validAttempt) {
             request.getSession().setAttribute("user", user);
             response.sendRedirect("/profile");
         } else {
-            response.sendRedirect("/login");
+            response.sendRedirect("/profile");
         }
     }
 }
