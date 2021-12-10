@@ -39,7 +39,11 @@ public class MySQLUsersDao implements Users {
 
     @Override
     public User findByUsername(String username) {
+
+
+
         String query = "SELECT * FROM user WHERE username = ? LIMIT 1";
+
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, username);
@@ -51,7 +55,9 @@ public class MySQLUsersDao implements Users {
 
     @Override
     public Long insert(User user) {
+
         String query = "INSERT INTO user (first_name, last_name, email, username, password, is_vendor) VALUES (?, ?, ?, ?, ?, ?)";
+
         try {
             PreparedStatement stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
             stmt.setString(1, user.getFirstName());

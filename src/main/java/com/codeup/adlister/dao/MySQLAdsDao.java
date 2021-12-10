@@ -61,6 +61,20 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+    @Override
+    public Ad getAd(long ad) throws SQLException {
+        String adQuery = "SELECT * FROM ad WHERE id = ? LIMIT 1";
+        PreparedStatement statement = connection.prepareStatement(adQuery);
+        statement.setLong(1, ad);
+        ResultSet rs = statement.executeQuery();
+
+        if ((! rs.next())) {
+            return null;
+        }
+        return extractAd(rs);
+
+    }
+
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
             rs.getLong("id"),
@@ -78,4 +92,8 @@ public class MySQLAdsDao implements Ads {
         }
         return ads;
     }
+
+
 }
+
+
