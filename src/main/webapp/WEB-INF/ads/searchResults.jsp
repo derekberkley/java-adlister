@@ -23,5 +23,6 @@
             </form>
         </div>
     </c:forEach>
+    <jsp:include page="/WEB-INF/partials/footer.jsp" />
 </body>
 </html>
