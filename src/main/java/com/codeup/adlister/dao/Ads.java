@@ -14,4 +14,5 @@ public interface Ads {
     //find unique ad by Id
     Ad getAd(long ad) throws SQLException;
 
+    List<Ad> searchAds(String search) throws SQLException;
 }

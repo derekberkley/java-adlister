@@ -22,7 +22,8 @@
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
             <p>$${ad.price}</p>
-            <form action="/ads/ad" method="get">
+            <form action="/ad" method="get">
+
                 <button>Click for Details</button>
                 <input type="hidden" name="ad" value="${ad.id}">
             </form>

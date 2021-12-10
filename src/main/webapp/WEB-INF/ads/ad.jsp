@@ -13,6 +13,7 @@
 <body>
     <h1>${ad.title}</h1>
     <p>${ad.description}</p>
-    <P>$${ad.price}</P>
+    <p>$${ad.price}</p>
+
 </body>
 </html>

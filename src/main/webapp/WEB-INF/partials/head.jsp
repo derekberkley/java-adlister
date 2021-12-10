@@ -10,8 +10,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap" rel="stylesheet">
 
+
 <!--Bootstrap Icons-->
 <%--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">--%>
 
 <!--Font Awesome Icons-->
+
 <%--<script src="https://kit.fontawesome.com/1ff901315e.js" crossorigin="anonymous"></script>--%>
