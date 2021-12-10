@@ -86,12 +86,9 @@ public class MySQLAdsDao implements Ads {
         statement.executeQuery();
 
         ResultSet rs = statement.getResultSet();
-        while (rs.next()) {
-            adList.add(getAd(rs.getLong("id")));
-        }
 
 
-        return adList;
+        return createAdsFromResults(rs);
 
     }
 

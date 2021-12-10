@@ -25,6 +25,10 @@ public class AdsIndexServlet extends HttpServlet {
         List<Ad> adList = null;
         try {
             adList = DaoFactory.getAdsDao().searchAds(search);
+
+            if (adList == null) {
+                res.sendRedirect("/login");
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
