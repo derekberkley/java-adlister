@@ -12,4 +12,5 @@ INSERT INTO vendor (user_id, vendor_name) VALUES
     (2, 'Orta\'s Milk Stand'),
     ((SELECT user.id FROM user WHERE user.first_name = 'Joanna'), 'Foss\'s Florals');
 
+
 INSERT INTO ad (title, description) VALUES ('10 Bundles of Celery', '10 Bundle of Celery, Non-GMO, Freshly Sourced, Plentiful crops');
