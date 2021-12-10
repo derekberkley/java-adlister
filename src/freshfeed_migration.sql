@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS ad (
 );
 
 CREATE TABLE IF NOT EXISTS favorite (
-    cust_id INT UNSIGNED,
+    user_id INT UNSIGNED,
     ad_id INT UNSIGNED,
 
     FOREIGN KEY (cust_id) REFERENCES customer (id),
