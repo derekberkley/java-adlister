@@ -7,20 +7,39 @@ public class User {
     private String username;
     private String email;
     private String password;
+    private String firstName;
+    private String lastName;
+    private boolean isVendor;
 
-    public User() {}
+    public User(long id, String username, String email, String password) {}
 
-    public User(String username, String email, String password) {
+    public User(String username, String email, String password, String firstName, String lastName, boolean isVendor) {
         this.username = username;
         this.email = email;
         setPassword(password);
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.isVendor = isVendor;
     }
 
-    public User(long id, String username, String email, String password) {
+    public User(long id, String username, String email, String password, String firstName, String lastName) {
         this.id = id;
         this.username = username;
         this.email = email;
         this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.isVendor = false;
+    }
+
+    public User(long id, String username, String email, String password, String firstName, String lastName, boolean isVendor) {
+        this.id = id;
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.isVendor = isVendor;
     }
 
     public long getId() {
@@ -48,10 +67,34 @@ public class User {
     }
 
     public String getPassword() {
-        return password;
+        return this.password;
     }
 
     public void setPassword(String password) {
         this.password = Password.hash(password);
+    }
+
+    public String getFirstName(){
+        return this.firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return this.lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public boolean getIsVendor(){
+        return this.isVendor;
+    }
+
+    public void setIsVendor(boolean isVendor) {
+        this.isVendor = isVendor;
     }
 }

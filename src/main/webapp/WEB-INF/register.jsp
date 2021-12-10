@@ -11,6 +11,14 @@
         <h1>Please fill in your information.</h1>
         <form action="/register" method="post">
             <div class="form-group">
+                <label for="first_name">First name:</label>
+                <input id="first_name" name="first_name" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label for="last_name">Last name:</label>
+                <input id="last_name" name="last_name" class="form-control" type="text">
+            </div>
+            <div class="form-group">
                 <label for="username">Username</label>
                 <input id="username" name="username" class="form-control" type="text">
             </div>
@@ -26,8 +34,14 @@
                 <label for="confirm_password">Confirm Password</label>
                 <input id="confirm_password" name="confirm_password" class="form-control" type="password">
             </div>
+            <div class="form-group text-center">
+                <label for="is_vendor">Check this box to register as a vendor.</label>
+                <input id="is_vendor" name="is_vendor" class="form-control" type="checkbox">
+            </div>
             <input type="submit" class="btn btn-primary btn-block">
         </form>
     </div>
 </body>
 </html>
+
+<%--HELLO--%>
