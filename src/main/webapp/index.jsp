@@ -12,20 +12,20 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <video class="w-100" autoplay loop muted id="farmer-vid" src="pexels-rodnae-productions-8540430.mp4"></video>
 
-<div class="container">
+
+<div style="background-color: #DD4A48; text-align: center">
     <h1>Here Are all the ads!</h1>
+</div>
+<div class="container">
     <c:forEach var="ad" items="${ads}">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
-
+            <p>$${ad.price}</p>
             <form action="/ads/ad" method="get">
                 <button>Click for Details</button>
                 <input type="hidden" name="ad" value="${ad.id}">
             </form>
-
-            <p>$${ad.price}</p>
-
         </div>
     </c:forEach>
 </div>
