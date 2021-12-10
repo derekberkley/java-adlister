@@ -16,12 +16,22 @@ public class Ad {
     }
 
     public Ad(long id, String title, String description) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
     }
 
-    public Ad(long id, String title, String description, String price) {
+    public Ad(long id, String title, String description, int price) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.Price = price;
     }
 
-    public Ad(String title, String description, String price) {
+    public Ad(String title, String description, int price) {
+        this.title = title;
+        this.description = description;
+        this.Price = price;
     }
 
     public long getId() {
