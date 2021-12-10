@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 @WebServlet(name = "AdPageServlet", urlPatterns = "/ad")
-public class ViewAdPageServelet extends HttpServlet {
+public class ViewAdPageServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
