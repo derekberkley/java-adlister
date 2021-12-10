@@ -34,6 +34,10 @@
                 <label for="confirm_password">Confirm Password</label>
                 <input id="confirm_password" name="confirm_password" class="form-control" type="password">
             </div>
+            <div class="form-group text-center">
+                <label for="is_vendor">Check this box to register as a vendor.</label>
+                <input id="is_vendor" name="is_vendor" class="form-control" type="checkbox">
+            </div>
             <input type="submit" class="btn btn-primary btn-block">
         </form>
     </div>
