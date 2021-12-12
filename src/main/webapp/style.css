@@ -43,3 +43,8 @@ footer {
 #howdy-img {
     width: 600px;
 }
+
+.product-img {
+    background-image: url("https://www.fillmurray.com/640/360");
+    border-radius: 10%;
+}

@@ -16,7 +16,7 @@
     </div>
     <div class="d-flex justify-content-between" id="home-ads">
         <div>
-            <h1>Here Are all the ads!</h1>
+            <h1>Here are some featured ads!</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequuntur explicabo iure, obcaecati perferendis sint voluptatum. Aspernatur dolorum exercitationem facere rerum. Sed, suscipit ullam? Dolorem eos excepturi inventore ipsam iure nam officiis, rerum temporibus. Ad, aliquam aperiam atque consequuntur culpa dolorem doloremque dolores eveniet facere mollitia, natus nihil, obcaecati pariatur perferendis placeat porro quae quas quo repellendus repudiandae rerum saepe sit vero. Ab, aliquam amet aperiam beatae consequatur delectus deserunt dicta dolor eaque eligendi, enim est fugiat impedit in incidunt itaque labore, maxime non odit officia omnis pariatur perspiciatis porro quo reiciendis repudiandae sint sit suscipit tempora tempore unde voluptate?</p>
             <c:forEach var="ad" items="${ads}">
                 <div class="col-md-4">
