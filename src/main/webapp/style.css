@@ -1,0 +1,45 @@
+#home {
+    z-index: 2;
+    position: relative;
+}
+
+nav {
+    background-color: #2fb2b2;
+}
+
+footer {
+    z-index: 0;
+    background-color: #2fb2b2;
+}
+
+#home-ads {
+    background-color: blanchedalmond;
+}
+
+#home-ads div {
+    margin: 1em 3em 1em 3em;
+}
+
+.logo {
+    height: 85px;
+}
+
+.icon {
+    color: #ece9e9;
+}
+
+.search {
+    width: 500px;
+}
+
+#farmer-vid {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    object-fit: fill;
+    opacity: 100%;
+}
+
+#howdy-img {
+    width: 600px;
+}
