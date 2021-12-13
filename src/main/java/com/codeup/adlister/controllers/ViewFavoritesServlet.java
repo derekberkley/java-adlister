@@ -16,18 +16,21 @@ import java.sql.SQLException;
 public class ViewFavoritesServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         User user = (User) request.getSession().getAttribute("user");
+        String fav = "/fav";
+        request.getSession().setAttribute("url", fav);
         if(user != null) {
-            Long singleId = Long.parseLong(request.getParameter("ad"));
-            try {
-                Ad singleAd = DaoFactory.getAdsDao().getAd(singleId);
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-            try {
-                request.setAttribute("ad", DaoFactory.getAdsDao().getAd(singleId));
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+//            Long singleId = Long.parseLong(request.getParameter("ad"));
+//            try {
+//                Ad singleAd = DaoFactory.getAdsDao().getAd(singleId);
+//            } catch (SQLException e) {
+//                e.printStackTrace();
+//            }
+//            try {
+//                request.setAttribute("ad", DaoFactory.getAdsDao().getAd(singleId));
+//            } catch (SQLException e) {
+//                e.printStackTrace();
+//            }
+            System.out.println(fav);
             request.getRequestDispatcher("/WEB-INF/favorites.jsp").forward(request, response);
         } else {
             response.sendRedirect("/login");
@@ -35,6 +38,6 @@ public class ViewFavoritesServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response){
-
+        request.setAttribute("url", "/fav");
     }
 }
