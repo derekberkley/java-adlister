@@ -44,6 +44,7 @@ CREATE TABLE IF NOT EXISTS favorite (
     id INT UNSIGNED AUTO_INCREMENT NOT NULL,
     user_id INT UNSIGNED,
     ad_id INT UNSIGNED,
+    PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES user (id),
     FOREIGN KEY (ad_id) REFERENCES ad (id)
 );
