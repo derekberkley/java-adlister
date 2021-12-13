@@ -5,7 +5,7 @@ INSERT INTO user (first_name, last_name, email, username, password, is_vendor) V
     ('John', 'Doe', 'john@doe.com', 'john', '$2a$12$LN32bi2notPL3i2N0XCTeeXFB1tEuFTu9Swl7RxVK8xyZnTl7K3Dy', false),
     ('Kevin', 'Orta', 'mrorta@email.com', 'korta', '$2a$12$LN32bi2notPL3i2N0XCTeeXFB1tEuFTu9Swl7RxVK8xyZnTl7K3Dy', true),
     ('Jane', 'Doe', 'jane@doe.com', 'jane', '$2a$12$LN32bi2notPL3i2N0XCTeeXFB1tEuFTu9Swl7RxVK8xyZnTl7K3Dy', false),
-    ('Joanna', 'Foss', 'msfoss@email.com', 'jfoss', '$2a$12$LN32bi2notPL3i2N0XCTeeXFB1tEuFTu9Swl7RxVK8xyZnTl7K3Dy', true)
+    ('Joanna', 'Foss', 'msfoss@email.com', 'jfoss', '$2a$12$LN32bi2notPL3i2N0XCTeeXFB1tEuFTu9Swl7RxVK8xyZnTl7K3Dy', true),
     ('a', 'a', 'a', 'a', '$2a$12$LN32bi2notPL3i2N0XCTeeXFB1tEuFTu9Swl7RxVK8xyZnTl7K3Dy', true);
 
 INSERT INTO vendor (user_id, vendor_name) VALUES
