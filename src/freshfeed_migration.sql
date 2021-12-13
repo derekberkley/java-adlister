@@ -1,3 +1,5 @@
+DROP DATABASE IF EXISTS thefreshfeed_db;
+
 CREATE DATABASE IF NOT EXISTS thefreshfeed_db;
 
 USE thefreshfeed_db;
@@ -33,7 +35,7 @@ CREATE TABLE IF NOT EXISTS category (
 
 CREATE TABLE IF NOT EXISTS ad (
     id INT UNSIGNED AUTO_INCREMENT NOT NULL,
-    ven_id INT UNSIGNED,
+    ven_id INT UNSIGNED NOT NULL,
     title VARCHAR(100) UNIQUE,
     description VARCHAR(500),
     ad_img_url VARCHAR(500) DEFAULT 'https://bit.ly/3lS54Hv',

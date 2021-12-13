@@ -2,6 +2,8 @@
 <%
     request.setAttribute("user", request.getSession().getAttribute("user"));
 %>
+
+
 <nav class="navbar navbar-light">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -14,13 +16,15 @@
         <ul class="nav d-flex">
             <li class="m-2"><a class="icon" href="/cart"><i class="fas fa-cart-plus fa-2x" data-toggle="tooltip" data-placement="bottom" title="Cart"></i></a></li>
             <li class="m-2"><a class="icon" href="/fav"><i class="far fa-star fa-2x" data-toggle="tooltip" data-placement="bottom" title="Favorites"></i></a></li>
-            <c:if test="${user == null}">
-                <li class="m-2"><a class="icon" href="/login"><i class="fas fa-sign-in-alt fa-2x" data-toggle="tooltip" data-placement="bottom" title="Login"></i></a></li>
-            </c:if>
-            <c:if test="${user != null}">
-                <li class="m-2"><a class="icon" href="/profile">Profile</a></li>
-                <li class="m-2"><a class="icon" href="/logout"><i class="fas fa-sign-out-alt fa-2x" data-toggle="tooltip" data-placement="bottom" title="Logout"></i></a></li>
-            </c:if>
+
+            <c:choose>
+                <c:when test="${user != null}">
+                    <li class="m-2"><a class="icon" href="/logout"><i class="fas fa-sign-out-alt fa-2x" data-toggle="tooltip" data-placement="bottom" title="Logout"></i></a></li>
+                </c:when>
+                <c:otherwise>
+                    <li class="m-2"><a class="icon" href="/login"><i class="fas fa-sign-in-alt fa-2x" data-toggle="tooltip" data-placement="bottom" title="Login"></i></a></li>
+                </c:otherwise>
+            </c:choose>
 
         </ul>
     </div><!-- /.navbar-collapse -->
