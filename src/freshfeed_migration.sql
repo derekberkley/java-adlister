@@ -2,6 +2,7 @@ CREATE DATABASE IF NOT EXISTS thefreshfeed_db;
 
 USE thefreshfeed_db;
 
+
 CREATE TABLE IF NOT EXISTS user (
     id INT UNSIGNED AUTO_INCREMENT NOT NULL,
     first_name VARCHAR(30) NOT NULL,
@@ -14,6 +15,7 @@ CREATE TABLE IF NOT EXISTS user (
     PRIMARY KEY (id)
 );
 
+
 CREATE TABLE IF NOT EXISTS vendor (
     id INT UNSIGNED AUTO_INCREMENT NOT NULL,
     user_id INT UNSIGNED,
@@ -21,6 +23,7 @@ CREATE TABLE IF NOT EXISTS vendor (
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES user (id)
 );
+
 
 CREATE TABLE IF NOT EXISTS category (
     id INT UNSIGNED AUTO_INCREMENT NOT NULL,
@@ -40,10 +43,13 @@ CREATE TABLE IF NOT EXISTS ad (
     FOREIGN KEY (cat_id) REFERENCES category (id)
 );
 
+
+
 CREATE TABLE IF NOT EXISTS favorite (
     id INT UNSIGNED AUTO_INCREMENT NOT NULL,
     user_id INT UNSIGNED,
     ad_id INT UNSIGNED,
+    PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES user (id),
     FOREIGN KEY (ad_id) REFERENCES ad (id)
 );

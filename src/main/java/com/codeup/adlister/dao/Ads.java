@@ -19,4 +19,7 @@ public interface Ads {
     List<Ad> getFeaturedAds();
 
     Long Delete(int id);
+  
+    List<Ad> adsById(Long id) throws SQLException;
+
 }
