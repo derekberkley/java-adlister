@@ -13,19 +13,19 @@ INSERT INTO vendor (user_id, vendor_name) VALUES
     (2, 'Orta\'s Milk Stand'),
     ((SELECT user.id FROM user WHERE user.first_name = 'Joanna'), 'Foss\'s Florals');
 
-INSERT INTO ad (title, description) VALUES ('10 Bundles of Celery', '10 Bundle of Celery, Non-GMO, Freshly Sourced, Plentiful crops');
+INSERT INTO ad (title, description) VALUES (1, '10 Bundles of Celery', '10 Bundle of Celery, Non-GMO, Freshly Sourced, Plentiful crops');
 ALTER table ad ADD price int unsigned not null;
-INSERT INTO ad (title, description, price) VALUES ('50 ears of Corn', 'Beautiful, yellow Corn, freshly pulled from stalks', '100');
-INSERT INTO ad (title, description, price) VALUES ('Cabbage', 'Green, Fresh', '10');
-INSERT INTO ad (title, description, price) VALUES ('Lettuce', 'Huge heads of lettuce', '30');
-INSERT INTO ad (title, description, price) VALUES ('Pickles', 'Dill, in a jar ready to eat', '5');
-INSERT INTO ad (title, description, price) VALUES ('Cucumber', 'Ripe, great for salads', '30');
-INSERT INTO ad (title, description, price) VALUES ('Tomatoes', 'Red, just ready to slice and eat', '3');
-INSERT INTO ad (title, description, price) VALUES ('Flax Seed', 'Perfect for smoothies', '7');
-INSERT INTO ad (title, description, price) VALUES ('Spinach', 'Comes seperated and ready to eat', '100');
-INSERT INTO ad (title, description, price) VALUES ('Watermelon', 'Sweet, tasty, juicy', '15');
-INSERT INTO ad (title, description, price) VALUES ('Honey Dew Melon', 'Round and juicy, put in fruit cups', '20');
-INSERT INTO ad (title, description, price) VALUES ('Mangos', 'Yellow, juicy and ripe', '50');
+INSERT INTO ad (ven_id, title, description, price) VALUES (2, '50 ears of Corn', 'Beautiful, yellow Corn, freshly pulled from stalks', '100');
+INSERT INTO ad (title, description, price) VALUES (3, 'Cabbage', 'Green, Fresh', '10');
+INSERT INTO ad (ven_id, title, description, price) VALUES (1, 'Lettuce', 'Huge heads of lettuce', '30');
+INSERT INTO ad (ven_id, title, description, price) VALUES (2, 'Pickles', 'Dill, in a jar ready to eat', '5');
+INSERT INTO ad (ven_id, title, description, price) VALUES (3, 'Cucumber', 'Ripe, great for salads', '30');
+INSERT INTO ad (ven_id, title, description, price) VALUES (1, 'Tomatoes', 'Red, just ready to slice and eat', '3');
+INSERT INTO ad (ven_id, title, description, price) VALUES (2, 'Flax Seed', 'Perfect for smoothies', '7');
+INSERT INTO ad (ven_id, title, description, price) VALUES (3, 'Spinach', 'Comes seperated and ready to eat', '100');
+INSERT INTO ad (ven_id, title, description, price) VALUES (1, 'Watermelon', 'Sweet, tasty, juicy', '15');
+INSERT INTO ad (ven_id, title, description, price) VALUES (2, 'Honey Dew Melon', 'Round and juicy, put in fruit cups', '20');
+INSERT INTO ad (ven_id, title, description, price) VALUES (3, 'Mangos', 'Yellow, juicy and ripe', '50');
 
 INSERT INTO category (name) VALUES
     ('Produce'),
