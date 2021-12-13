@@ -13,7 +13,7 @@ public interface Favorites {
     Long insert(Favorite favorite);
 
     //find unique ad by Id
-    Ad getFavorite(long favorite) throws SQLException;
+    Favorite getFavorite(long favorite) throws SQLException;
 
     List<Ad> searchFavorites(String search) throws SQLException;
 }
