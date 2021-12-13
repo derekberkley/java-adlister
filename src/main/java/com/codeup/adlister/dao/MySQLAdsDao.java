@@ -137,6 +137,8 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+
+
     public List<Ad> adsById(Long id) throws SQLException {
         String query = "SELECT * FROM ad WHERE ven_id = ?";
 
@@ -144,6 +146,13 @@ public class MySQLAdsDao implements Ads {
         statement.setLong(1, id);
         ResultSet rs = statement.executeQuery();
         return createAdsFromResults(rs);
+    }
+
+    @Override
+    public Long Edit(int id) throws SQLException {
+        String query = "UPDATE ad WHERE ad_id = ?";
+        PreparedStatement statement = connection.prepareStatement(query);
+
     }
 
 }
