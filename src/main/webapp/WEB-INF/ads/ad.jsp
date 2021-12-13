@@ -14,7 +14,7 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
-<div class="h-25 d-flex mx-auto justify-content-center"><img src="https://ufile.io/s521q7fh" alt="product details title image"></div>
+<div class="h-25 d-flex mx-auto justify-content-center align-items-center"><h1>Product Details</h1></div>
 <div class="card m-3 mx-auto border-light" style="max-width: 700px;">
     <div class="row g-0">
         <div class="col-md-4 product-img card"></div>

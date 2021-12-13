@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="w-100 navbar-header d-flex justify-content-between align-items-center">
-            <a class="navbar-brand" href="/FreshFeed"><img class="logo" src="https://bit.ly/3GxNeS7" alt="logo"></a>
+            <a class="navbar-brand" href="/FreshFeed"><img class="logo" src="/est2021.png" alt="logo"></a>
             <form class="form-inline" method="POST">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> <!--does nothing right now-->
                 <button class="btn btn-outline-light btn-lg" type="submit"><i class="fas fa-search"></i></button> <!--does nothing right now-->
