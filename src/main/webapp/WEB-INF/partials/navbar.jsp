@@ -19,6 +19,7 @@
 
             <c:choose>
                 <c:when test="${user != null}">
+                    <li class="m-2"><a class="icon" href="/profile">Profile</a></li>
                     <li class="m-2"><a class="icon" href="/logout"><i class="fas fa-sign-out-alt fa-2x" data-toggle="tooltip" data-placement="bottom" title="Logout"></i></a></li>
                 </c:when>
                 <c:otherwise>
