@@ -11,6 +11,8 @@ import java.io.IOException;
 public class ViewCartServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         User user = (User) request.getSession().getAttribute("user");
+        String cart = "/cart";
+        request.getSession().setAttribute("url", cart);
         if(user != null) {
             request.getRequestDispatcher("/cart.jsp").forward(request, response);
         } else {
