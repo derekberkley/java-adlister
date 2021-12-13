@@ -2,6 +2,7 @@ package com.codeup.adlister.controllers;
 
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.Ad;
+import com.codeup.adlister.models.Favorite;
 import com.codeup.adlister.models.User;
 
 import javax.servlet.ServletException;
@@ -35,6 +36,10 @@ public class ViewFavoritesServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response){
-
+        User user = (User) request.getSession().getAttribute("user");
+        Favorite favorite = new Favorite(
+                Long.parseLong(request.getParameter("id"))
+        );
+        DaoFactory.getFavsDao().insert(favorite);
     }
 }

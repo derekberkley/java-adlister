@@ -22,7 +22,7 @@ public class DaoFactory {
         return usersDao;
     }
 
-    private static Favorites getFavsDao(){
+    public static Favorites getFavsDao(){
         if (favsDao == null){
             favsDao = new MySQLFavsDao(config);
         }
