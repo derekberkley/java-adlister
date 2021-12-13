@@ -25,7 +25,6 @@ public class AdsIndexServlet extends HttpServlet {
         List<Ad> adList = null;
         try {
             adList = DaoFactory.getAdsDao().searchAds(search);
-
         } catch (SQLException e) {
             e.printStackTrace();
         }

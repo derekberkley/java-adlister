@@ -10,6 +10,9 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
+<div>
+    <!--put category drop down here where user can choose from list of categories and see items in that category-->
+</div>
     <h1>Here Are all the ads!</h1>
 
     <form action="/ads" method="post" class="form-inline my-2 my-lg-0">

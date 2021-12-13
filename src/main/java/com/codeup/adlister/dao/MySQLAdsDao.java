@@ -152,7 +152,7 @@ public class MySQLAdsDao implements Ads {
     public Long Edit(int id) throws SQLException {
         String query = "UPDATE ad WHERE ad_id = ?";
         PreparedStatement statement = connection.prepareStatement(query);
-
+        return null;
     }
 
 }
