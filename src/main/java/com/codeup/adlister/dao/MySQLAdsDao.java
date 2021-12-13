@@ -73,7 +73,6 @@ public class MySQLAdsDao implements Ads {
             return null;
         }
         return extractAd(rs);
-
     }
 
     @Override

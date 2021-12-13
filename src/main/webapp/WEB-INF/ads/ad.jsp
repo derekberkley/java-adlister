@@ -26,7 +26,11 @@
                 <h4>$${ad.price}</h4>
                 <div class="row justify-content-end">
                     <button type="submit" class="btn btn-info btn-sm m-2" data-toggle="tooltip" data-placement="bottom" title="Add to Cart">Add to Cart <i class="fas fa-cart-plus"></i></button> <!--add functionality-->
-                    <button type="submit" class="btn btn-info btn-sm m-2"  data-toggle="tooltip" data-placement="bottom" title="Add to Favorites">Add to Favorites <i class="far fa-star"></i></button> <!--add functionality-->
+                    <form action="/fav" method="get">
+                    <button type="submit" class="btn btn-info btn-sm m-2"  data-toggle="tooltip" data-placement="bottom" title="Add to Favorites">Add to Favorites <i class="far fa-star"></i></button>
+                        <input type="hidden" name="ad" value="${ad.id}">
+                        <!--add functionality-->
+                    </form>
                 </div>
                 <p class="card-text"><small class="text-muted">Last updated 7 hours ago</small></p>
             </div>
