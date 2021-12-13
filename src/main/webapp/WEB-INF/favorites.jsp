@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<p>${ad.id}</p>
+<p name="id">${ad.id}</p>
 <p>${ad.title}</p>
 <p>${ad.description}</p>
 <p>${ad.price}</p>
