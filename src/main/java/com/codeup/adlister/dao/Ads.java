@@ -17,4 +17,6 @@ public interface Ads {
     List<Ad> searchAds(String search) throws SQLException;
 
     List<Ad> getFeaturedAds();
+
+    Long Delete(int id);
 }

@@ -9,7 +9,7 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Single Ad" />
+        <jsp:param name="title" value="Single Ad"/>
     </jsp:include>
 </head>
 <body>
@@ -22,15 +22,26 @@
             <div class="card-body">
                 <h1 class="card-title">${ad.title}</h1>
                 <p class="card-text">${ad.description}</p>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores at eius ipsam, porro quae. Delectus iste nam obcaecati sunt.</p>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores at eius
+                    ipsam, porro quae. Delectus iste nam obcaecati sunt.</p>
                 <h4>$${ad.price}</h4>
                 <div class="row justify-content-end">
-                    <button type="submit" class="btn btn-info btn-sm m-2" data-toggle="tooltip" data-placement="bottom" title="Add to Cart">Add to Cart <i class="fas fa-cart-plus"></i></button> <!--add functionality-->
-                    <form action="/fav" method="get">
-                    <button type="submit" class="btn btn-info btn-sm m-2"  data-toggle="tooltip" data-placement="bottom" title="Add to Favorites">Add to Favorites <i class="far fa-star"></i></button>
-                        <input type="hidden" name="ad" value="${ad.id}">
-                        <!--add functionality-->
-                    </form>
+                    <button type="submit" class="btn btn-info btn-sm m-2" data-toggle="tooltip" data-placement="bottom"
+                            title="Add to Cart">Add to Cart <i class="fas fa-cart-plus"></i></button>
+                    <!--add functionality-->
+
+                    <button type="submit" class="btn btn-info btn-sm m-2" data-toggle="tooltip" data-placement="bottom"
+                            title="Add to Favorites">Add to Favorites <i class="far fa-star"></i></button>
+
+                    <!--add functionality-->
+                    <a href="/delete/${ad.id}">Delete</a>
+                    <a href="/edit/${ad.id}">Edit</a>
+
+<%--                    <form action="/delete" method="post">--%>
+<%--                        <button type="submit" class="btn btn-info btn-sm m-2" data-toggle="tooltip"--%>
+<%--                                data-placement="bottom" title="Delete">Delete <i class="far fa-star"></i></button>--%>
+<%--                        <input type="hidden" name="ad" value="${ad.id}">--%>
+<%--                    </form>--%>
                 </div>
                 <p class="card-text"><small class="text-muted">Last updated 7 hours ago</small></p>
             </div>
@@ -43,6 +54,6 @@
     <h4>${ad.description}</h4>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores at eius ipsam, porro quae. Delectus iste nam obcaecati sunt.</p>
     <p>$${ad.price}</p>--%>
-    <jsp:include page="/WEB-INF/partials/footer.jsp" />
+<jsp:include page="/WEB-INF/partials/footer.jsp"/>
 </body>
 </html>
