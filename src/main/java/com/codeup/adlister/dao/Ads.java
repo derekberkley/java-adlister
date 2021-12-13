@@ -15,4 +15,6 @@ public interface Ads {
     Ad getAd(long ad) throws SQLException;
 
     List<Ad> searchAds(String search) throws SQLException;
+
+    List<Ad> getFeaturedAds();
 }

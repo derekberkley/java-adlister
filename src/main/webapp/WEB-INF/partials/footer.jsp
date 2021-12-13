@@ -2,7 +2,7 @@
     <div class="col-3 text-center">
         contact info here.
     </div>
-    <a href="/FreshFeed"><img class="logo" src="https://bit.ly/3GxNeS7" alt="logo"></a>
+    <a href="/FreshFeed"><img class="" src="https://bit.ly/3GDEeLb" alt="fresh feed logo"></a>
     <div class="col-3 text-center">
         socials go here.
     </div>

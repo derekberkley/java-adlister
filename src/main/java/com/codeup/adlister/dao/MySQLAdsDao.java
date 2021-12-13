@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class MySQLAdsDao implements Ads {
@@ -110,7 +111,18 @@ public class MySQLAdsDao implements Ads {
         return ads;
     }
 
+    public List<Ad> getFeaturedAds() {
+        PreparedStatement stmt;
+        try {
+            stmt = connection.prepareStatement("SELECT * FROM ad");
+            ResultSet rs = stmt.executeQuery();
+
+            List<Ad> allAds = createAdsFromResults(rs);
+            Collections.shuffle(allAds);
+            return allAds.subList(0, 4);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
+   }
 
 }
-
-
