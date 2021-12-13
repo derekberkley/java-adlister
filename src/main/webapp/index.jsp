@@ -12,7 +12,7 @@
 <div id="home">
     <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
     <div class="d-flex align-items-center h-75">
-        <img id="howdy-img" src="https://bit.ly/3dKnuFH" alt="Welcome to Fresh Feed">
+        <img id="howdy-img" src="https://ufile.io/btfkf2ku" alt="Welcome to Fresh Feed">
     </div>
 
     <div class="d-flex justify-content-between" id="home-ads">
