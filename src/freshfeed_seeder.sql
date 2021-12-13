@@ -37,5 +37,4 @@ INSERT INTO category (name) VALUES
     ('Cooked'),
     ('Homemade'),
     ('Miscellaneous'),
-    ('Seeds'),
-    ('Bulk');
+    ('Seeds');
