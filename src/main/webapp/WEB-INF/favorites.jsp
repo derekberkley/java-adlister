@@ -4,10 +4,10 @@
     <title>Favorites</title>
 </head>
 <body>
-<p name="id">${ad.id}</p>
+<input type="hidden" name="id" value="${ad.id}">
 <p>${ad.title}</p>
 <p>${ad.description}</p>
-<p>${ad.price}</p>
+<p>$${ad.price}</p>
 
 </body>
 </html>

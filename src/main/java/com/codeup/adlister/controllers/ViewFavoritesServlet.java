@@ -36,7 +36,7 @@ public class ViewFavoritesServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response){
-        User user = (User) request.getSession().getAttribute("user");
+
         Favorite favorite = new Favorite(
                 Long.parseLong(request.getParameter("id"))
         );
