@@ -11,10 +11,10 @@ USE thefreshfeed_db;
 #     (1, 'Perry\'s Veggie Platters'),
 #     (2, 'Orta\'s Milk Stand'),
 #     ((SELECT user.id FROM user WHERE user.first_name = 'Joanna'), 'Foss\'s Florals');
-#
-# INSERT INTO ad (title, description) VALUES ('10 Bundles of Celery', '10 Bundle of Celery, Non-GMO, Freshly Sourced, Plentiful crops');
-# ALTER table ad ADD price int unsigned not null;
-# INSERT INTO ad (title, description, price) VALUES ('50 ears of Corn', 'Beautiful, yellow Corn, freshly pulled from stalks', '100')
+
+INSERT INTO ad (title, description) VALUES ('10 Bundles of Celery', '10 Bundle of Celery, Non-GMO, Freshly Sourced, Plentiful crops');
+ALTER table ad ADD price int unsigned not null;
+INSERT INTO ad (title, description, price) VALUES ('50 ears of Corn', 'Beautiful, yellow Corn, freshly pulled from stalks', '100')
 
 INSERT INTO ad (title, description, price) VALUES ('50 ears of Corn', 'Beautiful, yellow Corn, freshly pulled from stalks', '100');
 INSERT INTO ad (title, description, price) VALUES ('Cabbage', 'Green, Fresh', '10');
