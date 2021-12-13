@@ -23,7 +23,7 @@ public class ViewAdPageServlet extends HttpServlet {
 
 
         //grab an ad id from MySQLAdsDao
-        Long singleId = Long.parseLong(req.getParameter("ad"));
+        long singleId = Long.parseLong(req.getParameter("ad"));
         try {
             Ad singleAd = DaoFactory.getAdsDao().getAd(singleId);
         } catch (SQLException e) {
