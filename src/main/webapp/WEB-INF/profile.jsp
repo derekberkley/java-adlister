@@ -10,6 +10,13 @@
 
     <div class="container">
         <h1>Welcome, ${sessionScope.user.firstName}!</h1>
+        <h2>Here are all your ads</h2>
+        <p>Username: ${sessionScope.user.username}</p>
+        <p>Email: ${sessionScope.user.email}</p>
+        <form action="/edit-profile" method="get">
+            <button>Update Information</button>
+            <input type="hidden" name="edit-profile" value="${sessionScope.user.id}">
+        </form>
     </div>
     <jsp:include page="/WEB-INF/partials/footer.jsp" />
 </body>
