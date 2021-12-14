@@ -18,7 +18,12 @@ import static java.lang.Integer.parseInt;
 public class EditServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        if (request.getSession().getAttribute("user") == null) {
+            response.sendRedirect("/login");
+            return;
+        }
         User user = (User) request.getSession().getAttribute("user");
+        System.out.println(user);
         if(user != null) {
             String id = request.getPathInfo().substring(1);
             request.setAttribute("id", Long.parseLong(id));
@@ -29,7 +34,6 @@ public class EditServlet extends HttpServlet {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-
         } else {
             response.sendRedirect("/login");
         }
@@ -43,6 +47,8 @@ public class EditServlet extends HttpServlet {
                 request.getParameter("title"),
                 request.getParameter("description"),
                 parseInt(request.getParameter("price")));
+//                request.getParameter("category"))
+
         try {
             DaoFactory.getAdsDao().Edit(ad);
         } catch (SQLException e) {

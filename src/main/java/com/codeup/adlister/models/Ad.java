@@ -6,6 +6,7 @@ public class Ad {
     private String title;
     private  String description;
     private  int price;
+//    private String category;
 
     public Ad(long id, long userId, String title, String description, int price) {
         this.id = id;
@@ -13,6 +14,7 @@ public class Ad {
         this.title = title;
         this.description = description;
         this.price = price;
+//        this.category = category;
     }
 
     public Ad(long id, String title, String description) {
@@ -33,6 +35,20 @@ public class Ad {
         this.description = description;
         this.price = price;
     }
+
+
+//    public Ad(long id, long ven_id, String title, String description, int price) {
+//        this.id = id;
+//        this.ven_id = ven_id;
+//    }
+
+//    public String getCategory() {
+//        return category;
+//    }
+//
+//    public void setCategory(String category) {
+//        this.category = category;
+//    }
 
     public long getId() {
         return id;
