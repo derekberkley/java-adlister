@@ -40,6 +40,7 @@ CREATE TABLE IF NOT EXISTS ad (
     description VARCHAR(500),
     ad_img_url VARCHAR(500) DEFAULT 'https://bit.ly/3lS54Hv',
     cat_id INT UNSIGNED,
+    price decimal(10,2) not null,
     PRIMARY KEY (id),
     FOREIGN KEY (ven_id) REFERENCES vendor (id),
     FOREIGN KEY (cat_id) REFERENCES category (id)
