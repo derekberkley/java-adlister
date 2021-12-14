@@ -11,8 +11,10 @@
 <html>
 <head>
     <title>Search Results</title>
+    <jsp:include page="../partials/head.jsp"/>
 </head>
 <body>
+    <jsp:include page="../partials/navbar.jsp"/>
     <h1>Search Results</h1>
     <c:forEach var="ad" items="${adList}">
         <div class="col-md-6">
