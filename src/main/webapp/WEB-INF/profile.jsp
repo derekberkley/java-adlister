@@ -32,7 +32,7 @@
         </div>
     </div>
 
-    <c:if test="${isVendor}">
+    <c:if test="${sessionScope.user.isVendor == 1}">
         <div class="container mt-5 text-center">
             <form action="/ads/create" method="get">
                 <button class="btn btn-primary btn-lg mt-5 ml-3">Create Ad <i class="fas fa-plus"></i></button>
@@ -45,7 +45,12 @@
 
     <div class="container">
         <h2 class="text-center mt-5">Here are all your ads</h2>
-
+        <c:forEach var="ad" items="${ads}">
+            <div class="col-md-6">
+                <h2>${ad.title}</h2>
+                <p>${ad.description}</p>
+            </div>
+        </c:forEach>
 
 
     </div>

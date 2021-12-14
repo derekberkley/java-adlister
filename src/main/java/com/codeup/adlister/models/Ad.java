@@ -15,24 +15,35 @@ public class Ad {
         this.price = price;
     }
 
-    public Ad(long id, String title, String description) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-    }
 
-    public Ad(long id, String title, String description, int price) {
-        this.id = id;
+
+    public Ad(long userId, String title, String description, int price) {
         this.title = title;
         this.description = description;
         this.price = price;
+        this.userId = userId;
     }
 
-    public Ad(String title, String description, int price) {
-        this.title = title;
-        this.description = description;
-        this.price = price;
-    }
+//    public Ad(String title, String description, int price) {
+//        this.title = title;
+//        this.description = description;
+//        this.price = price;
+//    }
+//    public Ad(long userId, String title, String description, int price) {
+//        this.userId = userId;
+//        this.title = title;
+//        this.description = description;
+//        this.price = price;
+//    }
+//
+//    public Ad(long id, long userId, String title, String description) {
+//        this.id = id;
+//        this.title = title;
+//        this.description = description;
+//        this.userId = userId;
+//    }
+
+
 
     public long getId() {
         return id;
