@@ -1,7 +1,6 @@
 package com.codeup.adlister.dao;
 
 import com.codeup.adlister.Config;
-import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 
@@ -64,11 +63,12 @@ public class MySQLUsersDao implements Users {
                     rs.getString("password"),
                     rs.getString("first_name"),
                     rs.getString("last_name"),
-                    rs.getBoolean("is_vendor")
+                    rs.getByte("is_vendor")
             );
         }
         return user;
     }
+
 
     @Override
     public Long insert(User user) {
@@ -80,7 +80,7 @@ public class MySQLUsersDao implements Users {
             stmt.setString(3, user.getEmail());
             stmt.setString(4, user.getUsername());
             stmt.setString(5, user.getPassword());
-            stmt.setBoolean(6, user.getIsVendor());
+            stmt.setByte(6, user.getIsVendor());
 
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
@@ -114,7 +114,7 @@ public class MySQLUsersDao implements Users {
             rs.getString("password"),
             rs.getString("first_name"),
             rs.getString("last_name"),
-            rs.getBoolean("is_vendor")
+            rs.getByte("is_vendor")
         );
     }
 
