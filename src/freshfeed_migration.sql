@@ -18,15 +18,6 @@ CREATE TABLE IF NOT EXISTS user (
 );
 
 
-CREATE TABLE IF NOT EXISTS vendor (
-    id INT UNSIGNED AUTO_INCREMENT NOT NULL,
-    user_id INT UNSIGNED,
-    vendor_name VARCHAR(50) NOT NULL UNIQUE,
-    PRIMARY KEY (id),
-    FOREIGN KEY (user_id) REFERENCES user (id)
-);
-
-
 CREATE TABLE IF NOT EXISTS category (
     id INT UNSIGNED AUTO_INCREMENT NOT NULL,
     name VARCHAR(50) NOT NULL,
@@ -35,13 +26,12 @@ CREATE TABLE IF NOT EXISTS category (
 
 CREATE TABLE IF NOT EXISTS ad (
     id INT UNSIGNED AUTO_INCREMENT NOT NULL,
-    ven_id INT UNSIGNED NOT NULL,
     title VARCHAR(100) UNIQUE,
     description VARCHAR(500),
     ad_img_url VARCHAR(500) DEFAULT 'https://bit.ly/3lS54Hv',
     cat_id INT UNSIGNED,
+    price DECIMAL(10,2) NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (ven_id) REFERENCES vendor (id),
     FOREIGN KEY (cat_id) REFERENCES category (id)
 );
 

@@ -32,12 +32,15 @@
         </div>
     </div>
 
-    <div class="container mt-5 text-center">
-        <form action="/ads/create" method="get">
-            <button class="btn btn-primary btn-lg mt-5 ml-3">Create Ad <i class="fas fa-plus"></i></button>
-            <input type="hidden" name="create-ad" value="${sessionScope.user.id}">
-        </form>
-    </div>
+    <c:if test="${isVendor}">
+        <div class="container mt-5 text-center">
+            <form action="/ads/create" method="get">
+                <button class="btn btn-primary btn-lg mt-5 ml-3">Create Ad <i class="fas fa-plus"></i></button>
+                <input type="hidden" name="create-ad" value="${sessionScope.user.id}">
+            </form>
+        </div>
+    </c:if>
+
 
 
     <div class="container">

@@ -9,11 +9,11 @@ public class User {
     private String password;
     private String firstName;
     private String lastName;
-    private boolean isVendor;
+    private byte isVendor;
 
     public User(long id, String username, String email, String password) {}
 
-    public User(String username, String email, String password, String firstName, String lastName, boolean isVendor) {
+    public User(String username, String email, String password, String firstName, String lastName, byte isVendor) {
         this.username = username;
         this.email = email;
         setPassword(password);
@@ -29,10 +29,10 @@ public class User {
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.isVendor = false;
+        this.isVendor = 0;
     }
 
-    public User(long id, String username, String email, String password, String firstName, String lastName, boolean isVendor) {
+    public User(long id, String username, String email, String password, String firstName, String lastName, byte isVendor) {
         this.id = id;
         this.username = username;
         this.email = email;
@@ -98,11 +98,11 @@ public class User {
         this.lastName = lastName;
     }
 
-    public boolean getIsVendor(){
+    public byte getIsVendor(){
         return this.isVendor;
     }
 
-    public void setIsVendor(boolean isVendor) {
+    public void setIsVendor(byte isVendor) {
         this.isVendor = isVendor;
     }
 }

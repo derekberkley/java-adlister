@@ -23,7 +23,8 @@ public class RegisterServlet extends HttpServlet {
         String passwordConfirmation = request.getParameter("confirm_password");
         String firstName = request.getParameter("first_name");
         String lastName = request.getParameter("last_name");
-        boolean isVendor = Boolean.parseBoolean(request.getParameter("is_vendor"));
+        byte isVendor = Byte.parseByte(request.getParameter("isVendor"));
+        System.out.println(isVendor);
 
         // validate input
         boolean inputHasErrors = username.isEmpty()
