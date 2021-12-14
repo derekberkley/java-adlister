@@ -8,7 +8,7 @@
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="w-100 navbar-header d-flex justify-content-between align-items-center">
-            <a class="navbar-brand" href="/FreshFeed"><img class="logo" src="/est2021.png" alt="logo"></a>
+            <a class="navbar-brand" href="/FreshFeed"><h1>FreshFeed</h1></a>
             <form class="form-inline" action="/ads" method="post">
                 <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-light btn-lg" type="submit"><i class="fas fa-search"></i></button>
