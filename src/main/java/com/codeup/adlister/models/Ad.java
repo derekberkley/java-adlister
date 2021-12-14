@@ -17,38 +17,16 @@ public class Ad {
 //        this.category = category;
     }
 
-    public Ad(long id, String title, String description) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-    }
 
-    public Ad(long id, String title, String description, int price) {
-        this.id = id;
+
+    public Ad(long userId, String title, String description, int price) {
         this.title = title;
         this.description = description;
         this.price = price;
-    }
-
-    public Ad(String title, String description, int price) {
-        this.title = title;
-        this.description = description;
-        this.price = price;
+        this.userId = userId;
     }
 
 
-//    public Ad(long id, long ven_id, String title, String description, int price) {
-//        this.id = id;
-//        this.ven_id = ven_id;
-//    }
-
-//    public String getCategory() {
-//        return category;
-//    }
-//
-//    public void setCategory(String category) {
-//        this.category = category;
-//    }
 
     public long getId() {
         return id;

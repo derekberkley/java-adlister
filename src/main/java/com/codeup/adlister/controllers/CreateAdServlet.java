@@ -13,6 +13,7 @@ import java.io.IOException;
 
 @WebServlet(name = "controllers.CreateAdServlet", urlPatterns = "/ads/create")
 public class CreateAdServlet extends HttpServlet {
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         User user = (User) request.getSession().getAttribute("user");
         if(user != null) {
@@ -24,8 +25,13 @@ public class CreateAdServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         User user = (User) request.getSession().getAttribute("user");
-        Ad ad = new Ad(
 
+
+        long userId = user.getId();
+        System.out.println(userId);
+
+        Ad ad = new Ad(
+            userId,
             request.getParameter("title"),
             request.getParameter("description"),
             Integer.parseInt(request.getParameter("price"))

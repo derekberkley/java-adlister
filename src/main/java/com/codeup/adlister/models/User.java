@@ -42,12 +42,7 @@ public class User {
         this.isVendor = isVendor;
     }
 
-    public User(long userId, long id, String username, String email, String password) {
-        this.id = id;
-        this.username = username;
-        this.email = email;
-        this.password = password;
-    }
+
 
 
     public long getId() {
