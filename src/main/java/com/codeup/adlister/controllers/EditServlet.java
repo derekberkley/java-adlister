@@ -18,16 +18,21 @@ import static java.lang.Integer.parseInt;
 public class EditServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-        String id = request.getPathInfo().substring(1);
-        request.setAttribute("id",Long.parseLong(id));
-        try {
-            Ad ad = DaoFactory.getAdsDao().getAd(Long.parseLong(id));
-            request.setAttribute("ad", ad);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        request.getRequestDispatcher("/WEB-INF/ads/edit.jsp").forward(request,response);
+        User user = (User) request.getSession().getAttribute("user");
+        if(user != null) {
+            String id = request.getPathInfo().substring(1);
+            request.setAttribute("id", Long.parseLong(id));
+            try {
+                Ad ad = DaoFactory.getAdsDao().getAd(Long.parseLong(id));
+                request.setAttribute("ad", ad);
+                request.getRequestDispatcher("/WEB-INF/ads/edit.jsp").forward(request, response);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
 
+        } else {
+            response.sendRedirect("/login");
+        }
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -43,6 +48,6 @@ public class EditServlet extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
+        response.sendRedirect("/ads");
     }
 }
