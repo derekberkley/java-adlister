@@ -4,9 +4,6 @@ import com.codeup.adlister.Config;
 import com.codeup.adlister.models.Ad;
 import com.mysql.cj.jdbc.Driver;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -137,6 +134,8 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+
+
     public List<Ad> adsById(Long id) throws SQLException {
         String query = "SELECT * FROM ad WHERE ven_id = ?";
 
@@ -146,4 +145,18 @@ public class MySQLAdsDao implements Ads {
         return createAdsFromResults(rs);
     }
 
+    @Override
+    public void Edit(Ad ad) {
+        try {
+            String query = "UPDATE ad SET title = ?, description = ?, price = ? WHERE id = ?";
+            PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+            statement.setString(1, ad.getTitle());
+            statement.setString(2, ad.getDescription());
+            statement.setLong(3, ad.getPrice());
+            statement.setLong(4, ad.getId());
+            statement.executeUpdate();
+        } catch (SQLException e){
+            throw new RuntimeException("Error running", e);
+        }
+    }
 }

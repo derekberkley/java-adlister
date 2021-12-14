@@ -22,4 +22,6 @@ public interface Ads {
   
     List<Ad> adsById(Long id) throws SQLException;
 
+    void Edit(Ad ad) throws SQLException;
+
 }
