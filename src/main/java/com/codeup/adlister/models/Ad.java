@@ -1,18 +1,18 @@
 package com.codeup.adlister.models;
 
 public class Ad {
-    private long id;
+    private  long id;
     private long userId;
     private String title;
-    private String description;
-    private int Price;
+    private  String description;
+    private  int price;
 
     public Ad(long id, long userId, String title, String description, int price) {
         this.id = id;
         this.userId = userId;
         this.title = title;
         this.description = description;
-        Price = price;
+        this.price = price;
     }
 
     public Ad(long id, String title, String description) {
@@ -25,13 +25,13 @@ public class Ad {
         this.id = id;
         this.title = title;
         this.description = description;
-        this.Price = price;
+        this.price = price;
     }
 
     public Ad(String title, String description, int price) {
         this.title = title;
         this.description = description;
-        this.Price = price;
+        this.price = price;
     }
 
     public long getId() {
@@ -67,10 +67,10 @@ public class Ad {
     }
 
     public int getPrice() {
-        return Price;
+        return price;
     }
 
     public void setPrice(int price) {
-        Price = price;
+        this.price = price;
     }
 }
