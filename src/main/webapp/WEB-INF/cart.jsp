@@ -8,28 +8,57 @@
 </head>
 <body>
 <jsp:include page="partials/navbar.jsp"/>
+
+<div class="container">
+
 <h1 class="text-center">Your Cart</h1>
 
 <c:choose>
     <c:when test="${cart.isEmpty()}">
-        <h2>Empty</h2>
+        <div class="h-75 d-flex flex-column justify-content-center align-items-center">
+            <h2>Your cart is empty!</h2>
+            <p>Go shopping!</p>
+            <a href="ads"><button>View All Products</button></a>
+            </div>
     </c:when>
     <c:otherwise>
         <c:forEach var="ad" items="${cart}">
-            <div class="card text-dark bg-light p-2 col-md-4">
-                <img src="https://www.fillmurray.com/640/360" class="card-img-top img-fluid"
-                     alt="Fill Murray Placeholder">
-                <h3 class="card-title mx-auto mt-2">${ad.title}</h3>
-                <p class="card-text mx-auto">${ad.description}</p>
-                <form action="/ad" method="get" class="d-md-flex justify-content-md-end align-items-end">
-                    <button class="btn btn-outline-dark btn-sm">Click for Details</button>
-                    <input type="hidden" name="ad" value="${ad.id}">
-                </form>
+
+            <div class="card">
+                <img class="card-img-top" src="https://www.fillmurray.com/640/360" alt="Fill Murray Placeholder">
+                <div class="card-body">
+                    <h5 class="card-title">${ad.title}</h5>
+                    <p class="card-text">${ad.description}</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti doloremque ducimus error recusandae vel? Amet esse ex in iste magni quidem rem repellendus sunt temporibus!</p>
+                    <form action="/removeFromCart" method="post">
+                    <button type="submit" class="btn btn-info btn-sm m-2" data-toggle="tooltip" data-placement="bottom"
+                            title="Remove From Cart">Remove</button>
+                            <input type="hidden" name="ad" value="${ad.id}">
+                    </form>
+                </div>
             </div>
+
+
+<%--                <div class="card text-dark bg-light p-2 col-md-4">--%>
+<%--                    <img src="https://www.fillmurray.com/640/360" class="card-img-top img-fluid"--%>
+<%--                         alt="Fill Murray Placeholder">--%>
+<%--                    <h3 class="card-title mx-auto mt-2">${ad.title}</h3>--%>
+<%--                    <p class="card-text mx-auto">${ad.description}</p>--%>
+<%--                    <form action="/ad" method="get" class="d-md-flex justify-content-md-end align-items-end">--%>
+<%--                        <button class="btn btn-outline-dark btn-sm">Click for Details</button>--%>
+<%--                        <input type="hidden" name="ad" value="${ad.id}">--%>
+<%--                    </form>--%>
+<%--                    <form action="/ad" method="get" class="d-md-flex justify-content-md-end align-items-end">--%>
+<%--                        <button class="btn btn-outline-dark btn-sm">Click for Details</button>--%>
+<%--                        <input type="hidden" name="ad" value="${ad.id}">--%>
+<%--                    </form>--%>
+<%--                </div>--%>
+
         </c:forEach>
     </c:otherwise>
 </c:choose>
 
+</div>
 
 <jsp:include page="partials/footer.jsp"/>
 </body>

@@ -16,7 +16,7 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <a href="/ads" class="m-3 btn btn-info">View All Products</a>
 <div class="h-25 d-flex mx-auto justify-content-center align-items-center"><h1>Product Details</h1></div>
-<div class="card m-3 mx-auto border-light" style="max-width: 700px;">
+<div class="card m-3 mx-auto border-light">
     <div class="row g-0">
         <div class="col-md-4 product-img card"></div>
         <div class="col-md-8">
