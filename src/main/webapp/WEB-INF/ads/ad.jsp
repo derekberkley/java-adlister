@@ -14,6 +14,7 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
+<a href="/ads" class="m-3 btn btn-info">View All Products</a>
 <div class="h-25 d-flex mx-auto justify-content-center align-items-center"><h1>Product Details</h1></div>
 <div class="card m-3 mx-auto border-light" style="max-width: 700px;">
     <div class="row g-0">
@@ -26,12 +27,15 @@
                     ipsam, porro quae. Delectus iste nam obcaecati sunt.</p>
                 <h4>$${ad.price}</h4>
                 <div class="row justify-content-end">
+                    <form action="/addToCart" method="post">
                     <button type="submit" class="btn btn-info btn-sm m-2" data-toggle="tooltip" data-placement="bottom"
-                            title="Add to Cart">Add to Cart <i class="fas fa-cart-plus"></i></button>
+                            title="Add to Cart"><i class="fas fa-cart-plus"></i></button>
+                            <input type="hidden" name="ad" value="${ad.id}">
+                    </form>
                     <!--add functionality-->
 
                     <button type="submit" class="btn btn-info btn-sm m-2" data-toggle="tooltip" data-placement="bottom"
-                            title="Add to Favorites">Add to Favorites <i class="far fa-star"></i></button>
+                            title="Add to Favorites"><i class="far fa-star"></i></button>
 
                     <!--add functionality-->
                     <a href="/delete/${ad.id}">Delete</a>
