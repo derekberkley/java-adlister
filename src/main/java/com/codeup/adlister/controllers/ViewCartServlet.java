@@ -14,7 +14,7 @@ public class ViewCartServlet extends HttpServlet {
         String cart = "/cart";
         request.getSession().setAttribute("url", cart);
         if(user != null) {
-            request.getRequestDispatcher("/cart.jsp").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/cart.jsp").forward(request, response);
         } else {
             response.sendRedirect("/login");
         }
