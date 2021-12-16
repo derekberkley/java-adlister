@@ -16,7 +16,6 @@ public class HomeServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         request.setAttribute("ads", DaoFactory.getAdsDao().all());
         request.setAttribute("users", DaoFactory.getUsersDao());
-        request.setAttribute("featured", DaoFactory.getAdsDao().getFeaturedAds());
         request.getRequestDispatcher("/index.jsp").forward(request, response);
     }
 }

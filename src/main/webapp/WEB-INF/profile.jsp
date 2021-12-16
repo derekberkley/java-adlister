@@ -39,21 +39,22 @@
                 <input type="hidden" name="create-ad" value="${sessionScope.user.id}">
             </form>
         </div>
+
+        <div class="container">
+            <h2 class="text-center mt-5">Here are all your ads</h2>
+            <c:forEach var="ad" items="${ads}">
+                <div class="col-md-6">
+                    <h2>${ad.title}</h2>
+                    <p>${ad.description}</p>
+                    <form action="/ad" method="get">
+                        <button>Click for Details</button>
+                        <input type="hidden" name="ad" value="${ad.id}">
+                    </form>
+                </div>
+            </c:forEach>
+        </div>
     </c:if>
 
-
-
-    <div class="container">
-        <h2 class="text-center mt-5">Here are all your ads</h2>
-        <c:forEach var="ad" items="${ads}">
-            <div class="col-md-6">
-                <h2>${ad.title}</h2>
-                <p>${ad.description}</p>
-            </div>
-        </c:forEach>
-
-
-    </div>
     <jsp:include page="/WEB-INF/partials/footer.jsp" />
 </body>
 </html>
