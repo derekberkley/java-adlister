@@ -13,8 +13,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-5 product-img card"></div>
-            <div class="col-md-2"></div>
-            <div class="card ml-5" style="width: 20rem;">
+            <div class="col-md-2 col-sm-0"></div>
+            <div class="card ml-5 col">
                 <div class="card-header">
                     <strong>User Information</strong>
                 </div>
@@ -32,8 +32,12 @@
         </div>
     </div>
 
+    <div class="text-center mt-5">
+        <a href="/ads" class="m-3 btn btn-info">View All Products</a>
+    </div>
+
     <c:if test="${sessionScope.user.isVendor == 1}">
-        <div class="container mt-5 text-center">
+        <div class="container mt-3 text-center">
             <form action="/ads/create" method="get">
                 <button class="btn btn-primary btn-lg mt-5 ml-3">Create Ad <i class="fas fa-plus"></i></button>
                 <input type="hidden" name="create-ad" value="${sessionScope.user.id}">
