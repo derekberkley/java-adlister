@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: rodriquesperry
@@ -15,8 +16,9 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <a href="/ads" class="m-3 btn btn-info">View All Products</a>
+<div class="container">
 <div class="h-25 d-flex mx-auto justify-content-center align-items-center"><h1>Product Details</h1></div>
-<div class="card m-3 mx-auto border-light" style="max-width: 700px;">
+<div class="card m-3 mx-auto border-light">
     <div class="row g-0">
         <div class="col-md-4 product-img card"></div>
         <div class="col-md-8">
@@ -33,19 +35,22 @@
                             <input type="hidden" name="ad" value="${ad.id}">
                     </form>
                     <!--add functionality-->
-
+                    <form action="/addToFavs" method="post">
                     <button type="submit" class="btn btn-info btn-sm m-2" data-toggle="tooltip" data-placement="bottom"
                             title="Add to Favorites"><i class="far fa-star"></i></button>
-
+                            <input type="hidden" name="ad" value="${ad.id}">
+                    </form>
                     <!--add functionality-->
-                    <a href="/delete/${ad.id}">Delete</a>
-                    <a href="/edit/${ad.id}">Edit</a>
+                    <c:choose>
+                        <c:when test=""> <!--when ad.ven_id equals vendor.id-->
 
-<%--                    <form action="/delete" method="post">--%>
-<%--                        <button type="submit" class="btn btn-info btn-sm m-2" data-toggle="tooltip"--%>
-<%--                                data-placement="bottom" title="Delete">Delete <i class="far fa-star"></i></button>--%>
-<%--                        <input type="hidden" name="ad" value="${ad.id}">--%>
-<%--                    </form>--%>
+                        </c:when>
+                        <c:otherwise>
+                            <a href="/delete/${ad.id}">Delete</a>
+                            <a href="/edit/${ad.id}">Edit</a>
+                        </c:otherwise>
+                    </c:choose>
+
                 </div>
                 <p class="card-text"><small class="text-muted">Last updated 7 hours ago</small></p>
             </div>
@@ -53,11 +58,7 @@
     </div>
 </div>
 <div class="h-25"><!--for aesthetics, delete later--></div>
-
-<%--<h1>${ad.title}</h1>
-    <h4>${ad.description}</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores at eius ipsam, porro quae. Delectus iste nam obcaecati sunt.</p>
-    <p>$${ad.price}</p>--%>
+</div>
 <jsp:include page="/WEB-INF/partials/footer.jsp"/>
 </body>
 </html>

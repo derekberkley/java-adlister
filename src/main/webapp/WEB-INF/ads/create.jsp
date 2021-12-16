@@ -21,6 +21,25 @@
                 <label for="price">Price</label>
                 <input id="price" name="price" class="form-control" type="number">
             </div>
+<%--            <div class="input-group mb-3">--%>
+<%--                <select class="custom-select" id="category" name="category">--%>
+<%--                    <option selected>Choose a category:</option>--%>
+<%--                    <option value="Produce">Produce</option>--%>
+<%--                    <option value="Fruit">Fruit</option>--%>
+<%--                    <option value="Dairy">Dairy</option>--%>
+<%--                    <option value="Meat">Meat</option>--%>
+<%--                    <option value="Frozen">Frozen</option>--%>
+<%--                    <option value="Raw">Raw</option>--%>
+<%--                    <option value="Cooked">Cooked</option>--%>
+<%--                    <option value="Homemade">Homemade</option>--%>
+<%--                    <option value="Misc">Miscellaneous</option>--%>
+<%--                    <option value="Seeds">Seeds</option>--%>
+<%--                </select>--%>
+<%--                <div class="input-group-append">--%>
+<%--                    <label class="input-group-text" for="category">Product Category</label>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+
             <input type="submit" class="btn btn-block btn-primary">
         </form>
     </div>

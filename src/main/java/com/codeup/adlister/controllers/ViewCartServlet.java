@@ -20,8 +20,4 @@ public class ViewCartServlet extends HttpServlet {
             response.sendRedirect("/login");
         }
     }
-
-    protected void doPost(HttpServletRequest request, HttpServletResponse response){
-
-    }
 }
