@@ -32,6 +32,6 @@ public class AddToCartServlet extends HttpServlet {
             e.printStackTrace();
         }
 
-        response.sendRedirect(url);
+        response.sendRedirect("/cart");
     }
 }
