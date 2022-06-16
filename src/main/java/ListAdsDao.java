@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListAdsDAO implements AdsInterface {
+public class ListAdsDao implements AdsInterface {
     private List<Ad> allAds;
 
     @Override
@@ -43,5 +43,15 @@ public class ListAdsDAO implements AdsInterface {
         return allAds;
     }
 
+//    public static void main(String[] args) {
+//
+////        Ad testAd = new Ad(8L, 600L, "test ad title", "test ad description");
+////        AdsInterface adsDAO = DAOFactory.getAdsDao();
+////        List<Ad> allAds = adsDAO.allAds();
+////        adsDAO.insertAd(testAd);
+////        for(Ad ad: allAds) {
+////            System.out.println(ad.getAdTitle() + " " + ad.getAdDescription());
+//        }
+//    }
 
-}
+} 

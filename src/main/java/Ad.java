@@ -28,4 +28,6 @@ public class Ad {
     public String getAdDescription() {return adDescription;}
 
     public void setAdDescription(String adDescription) {this.adDescription = adDescription;}
+
+
 }
