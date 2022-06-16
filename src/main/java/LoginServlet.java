@@ -16,11 +16,17 @@ public class LoginServlet extends HttpServlet {
 
             String username = request.getParameter("username");
             String password = request.getParameter("password");
-            if (username.equals("admin") && password.equals("password")) {
-                response.sendRedirect("/profile");
+
+            boolean validAttempt = username.equals("admin") && password.equals(("password"));
+            if (validAttempt) {
+                request.getSession().setAttribute("isAdmin", true);
+                response.sendRedirect(("/profile"));
             } else {
                 response.sendRedirect("/login");
             }
+
+
+//
 
     } //end doPost Method
 
