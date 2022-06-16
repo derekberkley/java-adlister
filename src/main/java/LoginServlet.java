@@ -8,7 +8,13 @@ import java.io.IOException;
 @WebServlet(name = "LoginServlet", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/login.jsp").forward(request, response);
+
+        //TODO: If a user is already logged in and they visit /login, instead redirect them to their profile page
+        if(request.getSession().getAttribute("user") != null) {
+            response.sendRedirect("/profile");
+        } else {
+            request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+        }
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -16,15 +22,18 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
 
 
-//        if (username.equals("admin") && password.equals("password")) {
-////            request.getSession().setAttribute("user", username);
-//            response.sendRedirect("/profile");
-
         boolean validAttempt = (username.equals("admin") && password.equals("password"));
         if (validAttempt) {
+            request.getSession().setAttribute("user", "user");
+            //TODO: Add a message on your profile page that welcomes the currently logged in user
+            request.getSession().setAttribute("name", username);
             response.sendRedirect("/profile");
         } else {
             response.sendRedirect("/login");
         }
+
     }
+
+
 }
+
