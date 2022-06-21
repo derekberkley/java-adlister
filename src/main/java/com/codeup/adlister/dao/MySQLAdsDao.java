@@ -27,6 +27,8 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+//    TODO: Refactor your MySQLAdsDao to use prepared statements.
+//     Test these changes and ensure everything still works.
     @Override
     public List<Ad> all() {
         PreparedStatement stmt = null;

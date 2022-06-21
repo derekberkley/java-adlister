@@ -35,7 +35,6 @@ public class MySQLUsersDAO implements Users {
             stmt.setString(3, user.getPassword());
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
-
             rs.next();
             return rs.getLong(1);
         } catch (SQLException e) {
