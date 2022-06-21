@@ -9,7 +9,10 @@ public class Password {
         return BCrypt.hashpw(password, BCrypt.gensalt(ROUNDS));
     }
 
+
     public static boolean check(String password, String hash) {
         return BCrypt.checkpw(password, hash);
     }
+
+
 }
