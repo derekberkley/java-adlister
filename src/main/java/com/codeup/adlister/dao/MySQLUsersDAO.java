@@ -44,13 +44,12 @@ public class MySQLUsersDAO implements Users {
 
     @Override
     public User findByUsername(String username) {
+        String query = "SELECT * FROM users WHERE username = ? LIMIT 1";
         try {
-            PreparedStatement stmt = connection.prepareStatement(
-                    "SELECT * FROM users WHERE username = ? LIMIT 1"
-            );
+            PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, username);
             ResultSet rs = stmt.executeQuery();
-            rs.next();
+//            rs.next();
             return extractUser(rs);
         } catch (SQLException e) {
             throw new RuntimeException("Error finding by username.", e);
