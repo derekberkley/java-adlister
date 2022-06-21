@@ -52,6 +52,7 @@ public class User {
         return password;
     }
 
+//    TODO: Make sure passwords are being hashed before they enter the database
     public void setPassword(String password) {
         this.password = Password.hash(password);
     }

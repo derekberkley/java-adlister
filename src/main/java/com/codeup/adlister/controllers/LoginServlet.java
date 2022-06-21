@@ -32,7 +32,7 @@ public class LoginServlet extends HttpServlet {
             return;
         }
 
-//        boolean validAttempt = password.equals(user.getPassword());
+        //TODO: Change your login logic to check against users' hashed passwords
         boolean validAttempt = Password.check(password, user.getPassword());
 
         if (validAttempt) {
